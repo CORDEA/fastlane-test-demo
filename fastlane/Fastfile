@@ -8,6 +8,9 @@ platform :ios do
   end
 
   lane :deploy do |options|
+    ipa = options[:ipa]
+    release_note = options[:release_note]
+    ios_deploy(ipa: ipa, release_note: release_note)
   end
 
   lane :test do |options|
@@ -19,6 +22,9 @@ platform :android do
   end
 
   lane :deploy do |options|
+    apk = options[:apk]
+    release_note = options[:release_note]
+    android_deploy(apk: apk, release_note: release_note)
   end
 
   lane :test do |options|
