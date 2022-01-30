@@ -1,0 +1,32 @@
+skip_docs
+
+before_all do |lane, options|
+end
+
+platform :ios do
+  lane :build do |options|
+  end
+
+  lane :deploy do |options|
+  end
+
+  lane :test do |options|
+  end
+end
+
+platform :android do
+  lane :build do |options|
+  end
+
+  lane :deploy do |options|
+  end
+
+  lane :test do |options|
+  end
+end
+
+after_all do |lane, options|
+end
+
+error do |lane, exception, options|
+end
