@@ -3,7 +3,7 @@ describe 'Fastfile' do
     @ff = Fastlane::FastFile.new('./fastlane/Fastfile')
   end
 
-  context 'ios' do
+  context 'when ios' do
     it 'deploy' do
       expect(Fastlane::Actions::IosDeployAction).to receive(:run) do |arg|
         options = arg.values
@@ -15,7 +15,7 @@ describe 'Fastfile' do
     end
   end
 
-  context 'android' do
+  context 'when android' do
     it 'deploy' do
       expect(Fastlane::Actions::AndroidDeployAction).to receive(:run) do |arg|
         options = arg.values
