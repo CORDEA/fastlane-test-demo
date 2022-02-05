@@ -1,38 +1,20 @@
 module Fastlane
   module Actions
     class IosDeployAction < Action
-      def self.run(params)
-        print 'Run IosDeployAction'
-      end
-
-      def self.description
-        ''
-      end
-
-      def self.details
-        ''
+      def self.run(_params)
+        UI.message 'Run IosDeployAction'
       end
 
       def self.available_options
         [
           FastlaneCore::ConfigItem.new(
             key: :ipa,
-            description: '',
           ),
           FastlaneCore::ConfigItem.new(
             key: :release_note,
-            description: '',
             optional: true,
           ),
         ]
-      end
-
-      def self.category
-        :beta
-      end
-
-      def self.return_value
-
       end
 
       def self.authors
